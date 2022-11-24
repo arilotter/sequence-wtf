@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sequence Bug</title>
+  </head>
+  <body>
+    <h1>Sequence logout / connection bug</h1>
+    <ol>
+      <li>
+        Connect your wallet by
+        <button class="connect">clicking here</button>
+      </li>
+      <li>
+        Check your wallet address and take note of it (it should be correct)
+        <button class="address">show address</button>
+      </li>
+      <li>
+        Close this tab, go to
+        <a href="https://sequence.app">https://sequence.app</a>, log out of
+        Sequence, log into a *different* Sequence wallet, and re-open this tab.
+      </li>
+      <li>
+        Check your wallet as reported by sequence.js and take note of it (it
+        will be the address you connected with, not the address Sequence
+        currently is logged into)
+        <button class="address">show address</button>
+      </li>
+    </ol>
+    <script src="./index.ts" type="module"></script>
+  </body>
+</html>
